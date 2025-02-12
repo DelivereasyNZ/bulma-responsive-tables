@@ -33,7 +33,7 @@
 .b-table .table {
   width: 100%;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 0.375rem;
   border-collapse: separate;
 }
 .b-table .table th {
@@ -61,11 +61,11 @@
   text-align: center;
 }
 .b-table .table th.is-current-sort {
-  border-color: hsl(0deg, 0%, 48%);
+  border-color: hsl(221, 14%, 48%);
   font-weight: 700;
 }
 .b-table .table th.is-sortable:hover {
-  border-color: hsl(0deg, 0%, 48%);
+  border-color: hsl(221, 14%, 48%);
 }
 .b-table .table th.is-sortable, .b-table .table th.is-sortable .th-wrap {
   cursor: pointer;
@@ -78,13 +78,13 @@
   position: sticky;
   left: 0;
   z-index: 3 !important;
-  background: hsl(0deg, 0%, 100%);
+  background: hsl(221, 14%, 100%);
 }
 .b-table .table tr.is-selected .checkbox input:checked + .check {
-  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:hsl(171deg, 100%25, 41%25)' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
+  background: findColorInvert(hsl(171, 100%, 41%)) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Cpath style='fill:hsl(171, 100%25, 41%25)' d='M 0.04038059,0.6267767 0.14644661,0.52071068 0.42928932,0.80355339 0.3232233,0.90961941 z M 0.21715729,0.80355339 0.85355339,0.16715729 0.95961941,0.2732233 0.3232233,0.90961941 z'%3E%3C/path%3E%3C/svg%3E") no-repeat center center;
 }
 .b-table .table tr.is-selected .checkbox input + .check {
-  border-color: #fff;
+  border-color: findColorInvert(hsl(171, 100%, 41%));
 }
 .b-table .table tr.is-empty:hover {
   background-color: transparent;
@@ -105,27 +105,27 @@
   transition: none;
 }
 .b-table .table tr.detail {
-  box-shadow: inset 0 1px 3px hsl(0deg, 0%, 86%);
-  background: hsl(0deg, 0%, 98%);
+  box-shadow: inset 0 1px 3px hsl(221, 14%, 86%);
+  background: hsl(221, 14%, 98%);
 }
 .b-table .table tr.detail .detail-container {
   padding: 1rem;
 }
 .b-table .table:focus {
-  border-color: hsl(229deg, 53%, 53%);
-  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+  border-color: hsl(233, 100%, 63%);
+  box-shadow: 0 0 0 0.125em rgba(66.3, 88.315, 255, 0.25);
 }
 .b-table .table.is-bordered th.is-current-sort,
 .b-table .table.is-bordered th.is-sortable:hover {
-  border-color: hsl(0deg, 0%, 86%);
-  background: hsl(0deg, 0%, 96%);
+  border-color: hsl(221, 14%, 86%);
+  background: hsl(221, 14%, 96%);
 }
 .b-table .table td.is-sticky {
   position: -webkit-sticky;
   position: sticky;
   left: 0;
   z-index: 1;
-  background: hsl(0deg, 0%, 100%);
+  background: hsl(221, 14%, 100%);
 }
 .b-table .table td.is-image-cell .image {
   margin: 0 auto;
@@ -151,7 +151,7 @@
   position: sticky;
   top: 0;
   z-index: 2;
-  background: hsl(0deg, 0%, 100%);
+  background: hsl(221, 14%, 100%);
 }
 @media screen and (max-width: 768px) {
   .b-table .table-wrapper.has-mobile-cards thead {
@@ -162,7 +162,7 @@
     display: inherit;
   }
   .b-table .table-wrapper.has-mobile-cards tr {
-    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    box-shadow: 0 2px 3px rgba(8.772, 9.6764, 11.628, 0.1), 0 0 0 1px rgba(8.772, 9.6764, 11.628, 0.1);
     max-width: 100%;
     position: relative;
     display: block;
@@ -191,7 +191,7 @@
     width: auto;
     justify-content: space-between;
     text-align: right;
-    border-bottom: 1px solid hsl(0deg, 0%, 96%);
+    border-bottom: 1px solid hsl(221, 14%, 96%);
   }
   .b-table .table-wrapper.has-mobile-cards tr:not(.detail):not(.is-empty):not(.table-footer) td:before {
     content: attr(data-label);
@@ -235,7 +235,7 @@
   display: inherit;
 }
 .b-table .table-wrapper.is-card-list tr {
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  box-shadow: 0 2px 3px rgba(8.772, 9.6764, 11.628, 0.1), 0 0 0 1px rgba(8.772, 9.6764, 11.628, 0.1);
   max-width: 100%;
   position: relative;
   display: block;
@@ -264,7 +264,7 @@
   width: auto;
   justify-content: space-between;
   text-align: right;
-  border-bottom: 1px solid hsl(0deg, 0%, 96%);
+  border-bottom: 1px solid hsl(221, 14%, 96%);
 }
 .b-table .table-wrapper.is-card-list tr:not(.detail):not(.is-empty):not(.table-footer) td:before {
   content: attr(data-label);
@@ -306,8 +306,8 @@
 }
 .b-table.is-loading:after {
   animation: spinAround 500ms infinite linear;
-  border: 2px solid hsl(0deg, 0%, 86%);
-  border-radius: 9999px;
+  border: 2px solid var(--bulma-loading-color);
+  border-radius: var(--bulma-radius-rounded);
   border-right-color: transparent;
   border-top-color: transparent;
   content: "";
