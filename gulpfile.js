@@ -35,7 +35,7 @@ function processScssCompressedDemo () {
 /* Compile Bulma.min.css for demo */
 
 function processBulmaSassFn ( isDemo ) {
-  return src('node_modules/bulma/bulma.sass')
+  return src('node_modules/bulma/bulma.scss')
     .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
     .pipe(rename('bulma.min.css'))
     .pipe(dest(destDir(isDemo)))

@@ -1,13 +1,13 @@
-@import "node_modules/bulma/sass/utilities/initial-variables";
-@import "node_modules/bulma/sass/utilities/derived-variables";
-@import "node_modules/bulma/sass/utilities/mixins";
+@use "../node_modules/bulma/sass/utilities/initial-variables";
+@use "../node_modules/bulma/sass/utilities/derived-variables";
+@use "../node_modules/bulma/sass/utilities/mixins";
 
 $size-base: 1rem !default;
 
 $table-sticky-header-height: 300px !default;
-$table-background-color: $scheme-main !default;
-$table-row-active-background-color: $primary !default;
-$table-row-active-color: $primary-invert !default;
+$table-background-color: derived-variables.$scheme-main !default;
+$table-row-active-background-color: derived-variables.$primary !default;
+$table-row-active-color: findColorInvert(derived-variables.$primary) !default;
 
 $speed-slow: 150ms !default;
 $speed-slower: 250ms !default;
