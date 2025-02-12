@@ -13,9 +13,10 @@ function destDir ( isDemo ) {
 
 function processScssFn ( outputStyle, isDemo ) {
   const outName = outputStyle === 'compressed' ? 'main.min.css' : 'main.css'
+  const includePaths = ['node_modules']
 
   return src('bulma-responsive-tables.scss')
-    .pipe(sass({outputStyle}).on('error', sass.logError))
+    .pipe(sass({outputStyle, includePaths}).on('error', sass.logError))
     .pipe(rename(outName))
     .pipe(dest(destDir(isDemo)))
 }
@@ -39,10 +40,6 @@ function processBulmaSassFn ( isDemo ) {
     .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
     .pipe(rename('bulma.min.css'))
     .pipe(dest(destDir(isDemo)))
-}
-
-function processBulmaSass () {
-  return processBulmaSassFn()
 }
 
 function processBulmaSassDemo () {
