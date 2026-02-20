@@ -13,7 +13,7 @@
 .b-table {
   transition: opacity 86ms ease-out;
 }
-@media screen and (min-width: 769px), print {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
   .b-table .table-mobile-sort {
     display: none;
   }
@@ -148,7 +148,7 @@
     overflow-y: initial !important;
   }
 }
-@media screen and (min-width: 769px), print {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
   .b-table .table-wrapper.has-sticky-header.has-tablet-cards {
     height: initial !important;
     overflow-y: initial !important;
@@ -235,7 +235,7 @@
     width: 100%;
   }
 }
-@media screen and (min-width: 769px), print {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
   .b-table .table-wrapper.has-tablet-cards thead {
     display: none;
   }

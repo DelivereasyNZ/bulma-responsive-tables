@@ -129,7 +129,7 @@
   transition: opacity initial-variables.$speed initial-variables.$easing;
 
   .table-mobile-sort {
-    @include mixins.tablet {
+    @include mixins.tablet-only {
       display: none;
     }
   }
@@ -312,7 +312,7 @@
       }
 
       &.has-tablet-cards {
-        @include mixins.tablet {
+        @include mixins.tablet-only {
           height: initial !important;
           overflow-y: initial !important;
         }
@@ -336,7 +336,7 @@
     }
 
     &.has-tablet-cards {
-      @include mixins.tablet {
+      @include mixins.tablet-only {
         @include table-cards
       }
     }
