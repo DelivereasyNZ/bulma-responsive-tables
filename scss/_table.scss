@@ -311,6 +311,13 @@
         }
       }
 
+      &.has-tablet-cards {
+        @include mixins.tablet {
+          height: initial !important;
+          overflow-y: initial !important;
+        }
+      }
+
       tr:first-child {
         th {
           position: -webkit-sticky;
@@ -324,6 +331,12 @@
 
     &.has-mobile-cards {
       @include mixins.mobile {
+        @include table-cards
+      }
+    }
+
+    &.has-tablet-cards {
+      @include mixins.tablet {
         @include table-cards
       }
     }
